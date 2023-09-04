@@ -1,6 +1,6 @@
 Book Data
 ====================
-This is a description of the project
+This project will show a book and show items of interest.
 
 Data Source
 ---------------------
