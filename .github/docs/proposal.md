@@ -14,4 +14,5 @@ Items of Interest
 
 Proposed Layout
 ---------------------
+![alt text](/.github/docs/LayoutProposal.png "Title")
 
