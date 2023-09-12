@@ -1,0 +1,41 @@
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: cyan;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+header {
+  margin-bottom: 1rem;
+}
+
+main {
+  background-color: white;
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 30rem;
+}
+
+section {
+  margin: 1rem 0 0;
+  line-height: 1.5rem;
+  white-space: pre-line;
+}
+
+/* Dark Mode */ 
+
+body[data-theme='dark'] {
+    background-color: gray;
+    color: white;
+}
+
+main[data-theme='dark'] {
+    background-color: black;
+    color: white;
+}
