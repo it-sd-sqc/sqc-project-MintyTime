@@ -1,4 +1,6 @@
-# Your project name
-Your given and family name.
+# SQC-Project
+Bradley Hayes
 
-A one-sentence description of your project.
+My name and link to GitHub repo with light and dark mode implemented.
+
+https://sqc-project-zntq.onrender.com
