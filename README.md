@@ -1,3 +1,5 @@
+### Hello from Joe!
+
 # SQC-Project
 Bradley Hayes
 
