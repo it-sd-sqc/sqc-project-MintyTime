@@ -15,7 +15,7 @@
     "node-html-parser": "^6.1.10",
     "standard": "^17.1.0",
     "stylelint": "^15.10.3",
-    "stylelint-config-standard": "^34.0.0"
+    "stylelint-config-standard": "^34.0.0",
     "svgoban": "^1.0.0"
   },
   "dependencies": {
