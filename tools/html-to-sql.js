@@ -25,7 +25,7 @@ import pkg from 'svgoban'
 const { serialize } = pkg
 
 // Configuration ///////////////////////////////////////////
-const srcPath = 'data/book.html'
+const srcPath = 'data/LadyMaclairn.html'
 const dstPath = 'docs/generated-schema.sql'
 const chapterIds = [
   'introduction',
