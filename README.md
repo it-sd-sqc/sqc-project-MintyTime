@@ -10,8 +10,19 @@ Entity Relationship Diagram
 ---
 
 erDiagram
-   BOOK ||--o{ CHAPTER : places
-   CHAPTER ||--|{ PAGE : contains
+   chapter ||--|{ section : contains
+    chapter {
+        id SERIAL pk
+        title TEXT "Chapter title"
+    }
+    
+   pageNumber ||--|{ chapter : contains
+    pageNumber {
+        id SERIAL pk
+        page_id INT fk "Page ID"
+        title TEXT "Page title"
+        number INT "Page number"
+    }
    
 ---
 title: A Look at Go ER diagrams
