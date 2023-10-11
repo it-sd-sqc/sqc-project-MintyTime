@@ -14,20 +14,19 @@ file.
 ***********************************************************/
 // flip through chapters extracting chapter title and page id (page number) //
 // Dependencies ////////////////////////////////////////////
-import { strict as assert } from 'node:assert'
-import { closeSync, openSync, readFileSync, writeFileSync }
+// import { strict as assert } from 'node:assert'
+import { openSync, readFileSync, writeFileSync } // closeSync,
   from 'node:fs'
 import { parse } from 'node-html-parser'
 
 // This module uses the CommonJS module format, so we need
 // to import it differently.
-import pkg from 'svgoban'
-const { serialize } = pkg
+// import pkg from 'svgoban'
+// const { serialize } = pkg
 
 // Configuration ///////////////////////////////////////////
 const srcPath = 'data/LadyMaclairn.html'
 const dstPath = 'docs/generated-schema.sql'
-
 
 const sqlHeader =
  `DROP TABLE IF EXISTS chapter;
@@ -50,57 +49,52 @@ CREATE TABLE pageNumber (
 INSERT INTO chapter (title, page_id) VALUES
 INSERT INTO pageNumber (page_id, title, number) VALUES
 `
-
-
 // Utility functions ///////////////////////////////////////
 // extract chapter title //
-function extractChapterTitle(chapterElement) {
-  const titleElement = chapterElement.querySelector(`h2.c005`);
+function extractChapterTitle (chapterElement) {
+  const titleElement = chapterElement.querySelector('h2.c005')
   if (titleElement) {
-    return titleElement.text.trim();
+    return titleElement.text.trim()
   }
-  return '';
+  return ''
 }
 // extract page_id //
-function extractPageId(chapterElement) {
-  const pageNumberElement = chapterElement.querySelector('span.pageno');
+function extractPageId (chapterElement) {
+  const pageNumberElement = chapterElement.querySelector('span.pageno')
   if (pageNumberElement) {
-    return pageNumberElement.id;
+    return pageNumberElement.id
   }
-  return '';
+  return ''
 }
 
 // Conversion //////////////////////////////////////////////
-const src = readFileSync(srcPath, 'utf8');
-const domRoot = parse(src);
-
+const src = readFileSync(srcPath, 'utf8')
+const domRoot = parse(src)
 
 // Extract guide chapters.
-const chapters = [];
-const chapterElements = domRoot.querySelectorAll('.chapter');
+const chapters = []
+const chapterElements = domRoot.querySelectorAll('.chapter')
 
 chapterElements.forEach(
   (chapterElement) => {
     // Extract the title
-    const title = extractTitle(chapterElement);
-    const pageId = extractPageId(chapterElement);
+    const title = extractChapterTitle(chapterElement)
+    const pageId = extractPageId(chapterElement)
     chapters.push({
       title,
       page_id: pageId
-  });
-  
-)};
-
+    })
+  }
+)
 
 // Output the data as SQL.
-const fd = openSync(dstPath, 'w');
-writeFileSync(fd, sqlHeader);
+const fd = openSync(dstPath, 'w')
+writeFileSync(fd, sqlHeader)
 chapters.forEach((chapter, index) => {
-  const value = `('${chapter.title.replace(/'/g, "''")}', '${chapter.page_id}')`;
-  writeFileSync(fd, value);
+  const value = `('${chapter.title.replace(/'/g, "''")}', '${chapter.page_id}')`
+  writeFileSync(fd, value)
   if (index < chapters.length - 1) {
-    writeFileSync(fd, ',/n');
+    writeFileSync(fd, ',/n')
   };
-});
+})
 writeFileSync(fd, ';\n\n')
-
