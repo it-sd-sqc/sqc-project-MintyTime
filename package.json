@@ -26,6 +26,7 @@
     "svgoban": "^1.0.0"
   },
   "dependencies": {
+    "ejs": "^3.1.9",
     "express": "^4.18.2"
   }
 }
