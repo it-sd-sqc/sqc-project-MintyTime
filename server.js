@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 5163
 //app.use(express.static('./public'))
 express()
   .use(express.static('public'))
-  .set('pages', 'pages')
+  .set('views', 'pages')
   .set('view engine', 'ejs')
   
 // Ready for browsers to connect ///////////////////////////
