@@ -9,13 +9,15 @@
     "test": "jasmine && standard \"**/*.js\" && html-validate \"*.html\" && stylelint \"**/*.css\""
   },
   "standard": {
-  "env": [ "jasmine" ]
+    "env": [
+      "jasmine"
+    ]
   },
   "Keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "html-validate": "^8.4.0",
+    "html-validate": "^8.5.0",
     "jasmine": "^5.1.0",
     "node-html-parser": "^6.1.10",
     "standard": "^17.1.0",
