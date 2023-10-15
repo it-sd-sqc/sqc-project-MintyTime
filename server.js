@@ -13,11 +13,11 @@ const app = express()
   
   // Routes //////////////////////////////////////////////////
   app.get('/', function (req, res) {
-    res.render('pages/index')
+    res.render('index')
   })
   
   app.get('/about', function (req, res) {
-    res.render('pages/about', { title: 'About' })
+    res.render('about', { title: 'About' })
   })
   
   app.get('/test', function (req, res) {
