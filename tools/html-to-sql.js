@@ -104,7 +104,7 @@ chapters.forEach((chapter, index) => {
 writeFileSync(fd, ';\n\n')
 
 // TODO: insert data into pageNumber table
-//writeFileSync(fd, sqlInsertPageNumber)
+//  writeFileSync(fd, sqlInsertPageNumber)
 
 // Chapter's SQL ID should match with the order they were inserted starting at 1
 // There still seems to be an issue with both the chapter extraction and the pagenumber stuff. Depends on how you want to implement the page number into your site.
