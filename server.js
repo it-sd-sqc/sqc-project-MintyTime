@@ -12,11 +12,16 @@ const app = express()
   app.set('view engine', 'ejs')
   
   // Routes //////////////////////////////////////////////////
-  .get('/', function (req, res) {
+  app.get('/', function (req, res) {
     res.render('pages/index')
   })
-  .get('/about', function (req, res) {
+  
+  app.get('/about', function (req, res) {
     res.render('pages/about', { title: 'About' })
+  })
+  
+  app.get('/test', function (req, res) {
+    res.render('test')
   })
  
 // Ready for browsers to connect ///////////////////////////
