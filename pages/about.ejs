@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" type="text/css" href="site.css">
-  <script src="/server.js" type="module" async></script>
+  <script src="/server.js" type="module" async></script>  <!-- ejs path -->
 </head>
 <body>
   <main>
@@ -18,14 +18,14 @@
       <h1>About Page</h1>
       <nav>
         <ul>
-          <li><a href="about.ejs">About</a></li>
-          <li><a href="index.ejs">Index</a></li>
+          <li><a href="/about">About</a></li> <!-- ejs path -->
+          <li><a href="/">Index</a></li>  <!-- ejs path -->
         </ul>
       </nav>
     </header>
     <p>Bradley Hayes<p>
     <li><a href="https://github.com/it-sd-sqc/sqc-project-MintyTime">My GitHub repo</a></li>
-         <script src="page.js"></script>
+         <script src="/page.js"></script> <!-- ejs path -->
   </main>
 </body>
 </html>
