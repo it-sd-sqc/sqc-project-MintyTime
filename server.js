@@ -5,9 +5,13 @@ import express from 'express'
 const PORT = process.env.PORT || 5163
 
 // Web server setup ////////////////////////////////////////
-const app = express()
-app.use(express.static('./public'))
-
+//const app = express()
+//app.use(express.static('./public'))
+express()
+  .use(express.static('public'))
+  .set('pages', 'pages')
+  .set('view engine', 'ejs')
+  
 // Ready for browsers to connect ///////////////////////////
 const displayPort = function () {
   console.log('Listening on ' + PORT)
