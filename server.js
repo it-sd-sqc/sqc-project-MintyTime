@@ -5,12 +5,11 @@ import express from 'express'
 const PORT = process.env.PORT || 5163
 
 // Web server setup ////////////////////////////////////////
-//const app = express()
+const app = express()
 //app.use(express.static('./public'))
-express()
-  .use(express.static('public'))
-  .set('views', 'pages')
-  .set('view engine', 'ejs')
+  app.use(express.static('public'))
+  app.set('views', 'pages')
+  app.set('view engine', 'ejs')
   
 // Ready for browsers to connect ///////////////////////////
 const displayPort = function () {
