@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 5163
 // Web server setup ////////////////////////////////////////
 const app = express()
 //app.use(express.static('./public'))
-  app.use(express.static('public'))
+  app.use(express.static('./public'))
   app.set('views', 'pages')
   app.set('view engine', 'ejs')
   
