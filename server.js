@@ -12,6 +12,11 @@ app.set('views', 'pages')
 app.set('view engine', 'ejs')
 
 // Routes //////////////////////////////////////////////////
+app.get('/', function (req, res) {
+  const test = 'testing123'
+  res.render('index', { test })
+})
+
 app.post('/', function (req, res) {
   const test = 'testing123'
   res.render('index', { test })
