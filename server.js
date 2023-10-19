@@ -17,11 +17,6 @@ app.get('/', function (req, res) {
   res.render('index', { diceRoll })
 })
 
-app.post('/', function (req, res) {
-  const test = 'testing123'
-  res.render('index', { test })
-})
-
 app.get('/about', function (req, res) {
   res.render('about', { title: 'About' })
 })
