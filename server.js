@@ -13,7 +13,8 @@ app.set('view engine', 'ejs')
 
 // Routes //////////////////////////////////////////////////
 app.get('/', function (req, res) {
-  res.render('index')
+  const test = 'testing123'
+  res.render('index', { test })
 })
 
 app.get('/about', function (req, res) {
