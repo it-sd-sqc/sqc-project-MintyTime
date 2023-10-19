@@ -19,11 +19,6 @@ import { openSync, readFileSync, writeFileSync } // closeSync,
   from 'node:fs'
 import { parse } from 'node-html-parser'
 
-// This module uses the CommonJS module format, so we need
-// to import it differently.
-// import pkg from 'svgoban'
-// const { serialize } = pkg
-
 // Configuration ///////////////////////////////////////////
 const srcPath = 'data/LadyMaclairn.html'
 const dstPath = 'docs/generated-schema.sql'
