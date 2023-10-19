@@ -13,8 +13,8 @@ app.set('view engine', 'ejs')
 
 // Routes //////////////////////////////////////////////////
 app.get('/', function (req, res) {
-  const test = 'testing123'
-  res.render('index', { test })
+  const diceRoll = Math.floor(Math.random() * 6) + 1
+  res.render('index', { diceRoll })
 })
 
 app.post('/', function (req, res) {
