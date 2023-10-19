@@ -51,7 +51,7 @@ INSERT INTO chapter (title) VALUES
 `
 
 // Separate SQL statement to allow chapter table insert values to populate in the correct spot
-const sqlInsertPageNumber = `INSERT INTO pageNumber (page_id, title, number) VALUES`
+// const sqlInsertPageNumber = 'INSERT INTO pageNumber (page_id, title, number) VALUES'
 
 // Utility functions ///////////////////////////////////////
 // extract chapter title //
