@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  background-color: cyan;
+  background-color: white;
 }
 
 h1, h2 {
@@ -12,38 +12,50 @@ h1, h2 {
 }
 
 header {
-  background-color: white;
+  background-color: #f0d096;
   color: black;
   text-align: center;
 }
 
 header h1 {
     margin: 0;
-    font-size: 10px;
+    font-size: 28px;
+}
+
+nav {
+  color: white;
+  font-size: 20px;
+  padding: 10px 0px 20px 330px;
+
 }
 
 footer {
-  background-color: white;
-  color: black;
+  background-color: #dcadc9;
+    color: black;
+    text-align: center;
+    padding: 25px;
+    position: fixed;
+    bottom: 0;
+    width: 96%;
 }
 
 footer p {
   margin: 0;
-  font-size: 7px;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 main {
-  background-color: white;
+  background-color: #eea4a4;
   padding: 1rem;
-  margin: 0 auto;
-  max-width: 30rem;
+  margin: auto;
 }
 
-section {
+/* section {
   margin: 1rem 0 0;
   line-height: 1.5rem;
   white-space: pre-line;
-}
+} */
 
 /* Dark Mode */ 
 
@@ -55,4 +67,20 @@ body[data-theme='dark'] {
 main[data-theme='dark'] {
     background-color: black;
     color: white;
+}
+
+footer[data-theme='dark'] {
+  background-color: #000000;
+    color: #f0d096;
+    text-align: center;
+    padding: 25px;
+    position: fixed;
+    bottom: 0;
+    width: 96%;
+}
+
+header[data-theme='dark'] {
+  background-color: ##664124;
+  color: #000000;
+  text-align: center;
 }
