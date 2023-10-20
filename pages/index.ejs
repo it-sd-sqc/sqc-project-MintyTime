@@ -9,22 +9,18 @@
 <body>
   <%- include('../shared/header.ejs') %>
   <main>
-  
     <header>
       <h1>Index Page</h1>
-      <h2>Dice Roll = <%= diceRoll %> </h2> 
-    </header> 
-    
+      <h2>Dice Roll = <%= diceRoll %> </h2>
+    </header>
     <section>
       <h2>Chapters</h2>
       <p>Enter a chapter number to see what page it's on. <br> Note, the chapter entry must be in roman numerals<p>
       <input type="text" placeholder="Enter chapter number">
       <button class="text-button">Submit</button>
     </section>
-      
     <script src="/page.js"></script>  <!-- ejs path -->
   </main>
   <%- include('../shared/footer.ejs') %>
 </body>
 </html>
-
