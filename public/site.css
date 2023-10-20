@@ -12,7 +12,24 @@ h1, h2 {
 }
 
 header {
-  margin-bottom: 1rem;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 10px;
+}
+
+footer {
+  background-color: white;
+  color: black;
+}
+
+footer p {
+  margin: 0;
+  font-size: 7px;
 }
 
 main {
